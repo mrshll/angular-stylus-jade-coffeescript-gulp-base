@@ -1,0 +1,36 @@
+doctype html
+html(ng-app='portraitApp' ng-controller='MainCtrl')
+  head
+    title(title='Portraits')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge,chrome=1')
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=yes')
+    meta(name='apple-mobile-web-app-status-bar-style' content='black')
+
+    link(rel='icon' href='/assets/favicon.png' type='image/x-icon')
+    link(rel='apple-touch-icon' href='')
+    link(rel='apple-touch-icon' href='')
+    link(rel='apple-touch-icon' sizes='76x76' href='')
+    link(rel='apple-touch-icon' sizes='120x120' href='')
+    link(rel='apple-touch-icon' sizes='152x152' href='')
+
+    link(rel='stylesheet' type='text/css' href='/assets/vendor.css')
+    link(rel='stylesheet' type='text/css' href='/assets/main.css')
+
+    base(href='/')
+    meta(name='fragment' content='!')
+
+  body(ng-cloak)
+    div(ui-view)
+
+    script(src="/assets/vendor.js")
+    script(src="/assets/app.js")
+    script(src="/assets/templates.js")
+
+    <!-- @if ENV='development' -->
+    if locals.livereload
+      script.
+        lr_host = 'http://' + (location.host || 'localhost').split(':')[0]
+        lr_port = #{ locals.livereload.port }
+        document.write('<script src="' + lr_host + ':' + lr_port + '/livereload.js?snipver=1"></' + 'script>')
+    <!-- @endif -->

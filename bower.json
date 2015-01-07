@@ -1,0 +1,22 @@
+{
+  "name": "portrait",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.10.2",
+    "angular-ui-router": "~0.2.11",
+    "angular": "1.3.1",
+    "lodash": "~2.4.1",
+    "angular-sanitize": "~1.2.15",
+    "angular-cookies": "~1.2.16",
+    "angular-resource": "~1.2.16",
+    "respond": "~1.4.2",
+    "jquery-address": "*",
+    "ng-lodash": "~0.0.2"
+  },
+  "devDependencies": {},
+  "overrides": {
+  },
+  "resolutions": {
+    "angular": "1.3.7"
+  }
+}
