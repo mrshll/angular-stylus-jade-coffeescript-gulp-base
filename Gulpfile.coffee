@@ -127,7 +127,7 @@ gulp.task 'jade', ->
   gulp.src("#{ config.client.src.views }/**/*.jade")
     .pipe($.jade())
     .pipe($.ngHtml2js
-      moduleName: 'parcelPartials'
+      moduleName: 'appTemplates'
     )
     .pipe($.concat 'templates.js')
     .pipe(gulp.dest config.client.build.assets)
@@ -145,7 +145,7 @@ gulp.task 'stylus', ->
         config.client.build.assets
       ]
       use: [nib()]
-      import: ['components/*.styl', 'globals/*.styl']
+      # import: ['components/*.styl', 'globals/*.styl']
     )
     .pipe($.autoprefixer
       browsers: ['last 2 versions'],

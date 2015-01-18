@@ -1,5 +1,5 @@
 {
-  "name": "portrait",
+  "name": "Base Project",
   "private": true,
   "dependencies": {
     "jquery": "~1.10.2",

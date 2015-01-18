@@ -1,2 +1,2 @@
-app.controller 'MainCtrl', ->
+app.controller 'MainCtrl', ($scope) ->
 

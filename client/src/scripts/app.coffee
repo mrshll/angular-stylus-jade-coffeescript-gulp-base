@@ -1,4 +1,6 @@
-app = angular.module('portraitApp', [
+app = angular.module('App', [
+  'appTemplates'
+  'ngResource'
   'ngLodash'
   'ui.router'
 ])
@@ -29,5 +31,7 @@ app.config ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider
 
     .state 'public.root',
       url: '/'
+      templateUrl: 'pages/index.html'
+      controller: 'MainCtrl'
 
 app.run ->
